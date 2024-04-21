@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>grid-area</title>
     <style>
         /* 
-            想要快速偏移位置可以使用span来指定单元格的个数，例：grid-column-end: span 2;表示在列上占2个单元格
+            区域方式合并单元格：grid-area
+            gird-area: 1/2/3/4, 四个参数分别是：row开始位置/column开始位置/row结束位置/column结束位置，
+            grid-area参数还可以是命名。
         */
         section{
             width: 500px;
@@ -21,11 +23,7 @@
             font-size: large;
         }
         .box1{
-            /* grid-column-start: 2;
-            grid-column-end: span 2; */
-            /* 简写方式 */
-            grid-column: 2/ span 2;
-            grid-row: 2 / 3;
+            grid-area: 2/2/3/3;
             display: grid;
             place-items: center;
         }

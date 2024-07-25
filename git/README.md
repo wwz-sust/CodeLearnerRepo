@@ -35,4 +35,21 @@ git diff命令默认不带参数时表示的是，对比工作区和暂存区的
 - 如果已经执行git commit -m "xxx"，但是对-m的注释不满意要进行修改可以使用此命令进行修改
 - 如果已经执行了git commit -m "xxx"，但是我又添加了一个新的文件打算和上一次提交到一块也可以使用此命名。
 
+## 给指定哈希值的提交打标签(tag)
+- git log (查看日志及哈希)
+```shell
+commit e6773348a5bf5edb8a1a05ed3b
+Author: wwz-sust <wwzsust@163.com>
+Date:   Thu Jul 25 17:24:43 2024 +0800
+```
+- git tag -a 版本 哈希 -m "介绍"
+- git tag -a v0.1.3 e6773348 -m "Release version 0.1.3"
+- git tag（查看当前tag列表）
+```shell
+v0.1
+v0.1.1
+v0.1.2
+v0.1.3
+```
+- git push origin v0.1.3（将刚打的tag推送到远程）
 

@@ -1,2 +1,4 @@
-# bash存储的历史记录
-`# history`
+# 这是一个学习shell的仓库
+
+- windows中Cmd和Powershell
+- linux中shell

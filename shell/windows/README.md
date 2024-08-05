@@ -13,10 +13,16 @@ rd /s /q C:\example
 # /s 参数表示删除指定文件夹及其所有子文件夹和文件。 
 # /q 参数表示静默模式，不提示确认。
 ```
+- 删除单独的文件
+```shell
+del 1.txt
+```
 - CMD中新建一个文件
 ```shell
+# type只能创建空的文件
 type nul > 1.txt
-echo "hello" > 1.txt
+# echo可以创建带内容的文件
+echo hello > 1.txt
 # >  覆盖内容
 # >> 追加内容
 ```
@@ -29,3 +35,17 @@ echo "hello" > 1.txt
 `scp -r "D:/3d/www" root@xx.xx.xxx.xxx:/root/cmdtest`
 2. 不需要输入密码（前提配置好ssh登录）
 `scp -r "D:/3d/www" root@aliyun:/root/cmdtest`
+
+### 管道操作运算
+> 管道操作就是将上次的命令的执行结果作为下个命令的输入
+```shell
+dir | find ".txt"
+# 查询当前目录下所有文件夹及其文件，并通过find筛选出以.txt结尾的文件
+
+netstat -an | find "TCP"
+# 查找网络中是TCP
+```
+- CMD中`&&`和`||`与程序中的意思一样：
+1. `&&`表示前面执行错误则后面不在执行
+2. `||`表示前面执行正确后面则不在执行
+- CMD中`>`和`>>`分别表示将内容覆盖和追加

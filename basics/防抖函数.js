@@ -1,6 +1,9 @@
-function sow(fn, dur){
-    timer && clearInterval(timer);
-    return () => {
-        timer = setTimeout(fn,dur)
+function debounce(fn, duration = 500){
+    let timer = null;
+    return function(...args) {
+        timer && clearInterval(timer);
+        timer = setTimeout( () => {
+            fn.apply(this, args)
+        },duration);
     }
 }

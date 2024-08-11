@@ -1,3 +1,4 @@
+# windows CMD常用命令
 - PowerShell中删除文件夹及其内部所有文件
 ```shell
 rm -r -fo C:\example
@@ -17,20 +18,38 @@ rd /s /q C:\example
 ```shell
 del 1.txt
 ```
-- CMD中新建一个文件
+### CMD中新建一个文件
+- type只能创建空的文件
 ```shell
-# type只能创建空的文件
 type nul > 1.txt
-# echo可以创建带内容的文件
-echo hello > 1.txt
+```
+- echo可以创建带内容的文件
+```shell
 # >  覆盖内容
 # >> 追加内容
+echo hello > 1.txt
 ```
 - 查看文本内容
 1. 在 cmd 中，使用 `type` 和 `more` 命令来查看文本文件内容。 type C:\example.txt
 2. 在 PowerShell 中，使用 `Get-Content`、`cat` 和 `more` 命令来查看文本文件内容。
-
-- 使用scp上传文件
+- 重命名命令
+`ren`
+```shell
+ren test test1
+```
+- copy文件
+```shell
+copy test1 test2
+```
+- del删除文件
+```shell
+md test
+echo 111 > 1.txt
+echo 222 > 2.txt
+# 删除test文件夹下的所有文件
+del test\*.txt
+```
+### 使用scp上传文件
 1. 需要输入密码
 `scp -r "D:/3d/www" root@xx.xx.xxx.xxx:/root/cmdtest`
 2. 不需要输入密码（前提配置好ssh登录）
@@ -50,8 +69,3 @@ netstat -an | find "TCP"
 2. `||`表示前面执行正确后面则不在执行
 - CMD中`>`和`>>`分别表示将内容覆盖和追加
 
-- 重命名命令
-`ren`
-```shell
-ren test test1
-```

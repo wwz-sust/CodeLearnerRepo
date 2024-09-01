@@ -49,9 +49,9 @@ echo 222 > 2.txt
 # 删除test文件夹下的所有文件
 del test\*.txt
 ```
-- move移动命令
+- move移动文件夹或者文件
 ```shell
-move .\1.txt d:\code
+move test d:\code\
 ```
 ### 使用scp上传文件
 1. 需要输入密码
@@ -72,4 +72,22 @@ netstat -an | find "TCP"
 1. `&&`表示前面执行错误则后面不在执行
 2. `||`表示前面执行正确后面则不在执行
 - CMD中`>`和`>>`分别表示将内容覆盖和追加
+### 用户操作
+```shell
+# 查看当前计算机用户
+net user
 
+# 查看用户的向详细信息
+net user admin
+
+# 新建
+net user admin 123456 /add
+
+# 删除
+net user delete admin
+```
+### 用户组
+```shell
+# 查看用户组,其中在*Administrators中的是最高权限（系统管理员）
+net localgroup
+```

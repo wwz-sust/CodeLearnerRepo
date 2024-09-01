@@ -49,6 +49,10 @@ echo 222 > 2.txt
 # 删除test文件夹下的所有文件
 del test\*.txt
 ```
+- move移动命令
+```shell
+move .\1.txt d:\code
+```
 ### 使用scp上传文件
 1. 需要输入密码
 `scp -r "D:/3d/www" root@xx.xx.xxx.xxx:/root/cmdtest`

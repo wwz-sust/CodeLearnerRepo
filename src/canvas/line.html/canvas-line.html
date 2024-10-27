@@ -16,12 +16,18 @@
         function draw(){
             const canvas = document.getElementById("canvas");
             const ctx = canvas.getContext("2d");
-            // console.log(ctx);
-            ctx.fillStyle = "rgb(200,0,0)";
-            ctx.fillRect(10,10,55,50);
+            
+            // 在canvas中绘制一条直线时需要注意beginPath()方法
+            // 因为canvas中绘制图形时，默认是闭合的，所以需要使用beginPath()方法来创建一个新的路径
+            // 否则会绘制出一条闭合的直线
 
-            ctx.fillStyle = "rgb(0,0,200,0.5)";
-            ctx.fillRect(30,30,55,50);
+            
+            ctx.beginPath();
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = "rgb(0,200,0)";
+            ctx.moveTo(340,200);
+            ctx.lineTo(100,100);
+            ctx.stroke();
         }
     </script>
 </body>

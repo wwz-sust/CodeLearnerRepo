@@ -1,4 +1,2 @@
-# study-notes
-This is a repository for learning technology
-
-1. grid Layout
+# Code-Notes
+这是一个个人学习的仓库，记录一些学习过程中的笔记

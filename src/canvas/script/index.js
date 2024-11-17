@@ -3,6 +3,8 @@ import draw from "./start.js";
 import beginpath from "./beginpath.js";
 import closepath from "./closepath.js";
 import isponitInPath from "./isponitinpath.js";
+import canvasArc from "./arc.js";
+
 
 
 // 这里刚开始随便乱画
@@ -14,3 +16,4 @@ beginpath();
 
 closepath();
 isponitInPath();
+canvasArc();

@@ -13,7 +13,7 @@ export default function isponitInPath() {
     ctx.rect(50, 50, 200, 100);
     ctx.stroke();
     const isIn = ctx.isPointInPath(80, 80);
-    console.log(isIn);
+    // console.log(isIn);
 
     ctx.beginPath();
     ctx.moveTo(20,20);
@@ -25,5 +25,5 @@ export default function isponitInPath() {
     ctx.lineWidth = 3;
     ctx.stroke();
 
-    console.log(ctx.isPointInPath(50, 50));
+    // console.log(ctx.isPointInPath(50, 50));
 }

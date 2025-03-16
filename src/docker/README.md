@@ -1,6 +1,32 @@
 # docker的安装及常用命令
 - 安装：在ubuntu 22.04上安装docker
 
+
+## Docker常用命令
+### 基本操作
+- 启动容器：`docker run [选项] 镜像名`
+  - `-d`: 后台运行
+  - `-p 宿主端口:容器端口`: 端口映射
+  - `-v 宿主目录:容器目录`: 挂载数据卷
+  - `--name`: 指定容器名称
+  
+- 容器管理：
+  - `docker ps`: 查看运行中的容器
+  - `docker ps -a`: 查看所有容器
+  - `docker start/stop/restart 容器ID`: 启动/停止/重启容器
+  - `docker rm 容器ID`: 删除容器
+  - `docker logs 容器ID`: 查看容器日志
+
+- 镜像管理：
+  - `docker images`: 查看本地镜像
+  - `docker pull 镜像名`: 拉取镜像
+  - `docker rmi 镜像ID`: 删除镜像
+  - `docker build -t 镜像名 .`: 构建镜像
+
+
+### 最佳实践
+1. 使用多阶段构建减小镜像大小
+
 ## Dockerfile的常用命令
 
 ### 基础命令

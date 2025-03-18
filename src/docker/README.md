@@ -71,3 +71,5 @@
 3. 使用.dockerignore排除不需要的文件
 4. 选择合适的基础镜像
 5. 及时清理缓存和临时文件
+
+### Docker中build官方命名是Dockerfile，如果是这个名字在执行docker build时就不用指定-f [文件名]，build时就会去寻找Dockerfile。

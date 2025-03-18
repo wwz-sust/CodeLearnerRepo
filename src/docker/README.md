@@ -15,6 +15,7 @@
   - `docker ps -a`: 查看所有容器
   - `docker start/stop/restart 容器ID`: 启动/停止/重启容器
   - `docker rm 容器ID`: 删除容器
+  - `docker rm -f 容器ID`: 删除正在运行的容器
   - `docker logs 容器ID`: 查看容器日志
 
 - 镜像管理：
